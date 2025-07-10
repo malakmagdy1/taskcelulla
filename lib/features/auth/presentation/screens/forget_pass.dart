@@ -1,14 +1,14 @@
-import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 
-import '../../../../core/widget/custom_textfield.dart';
 import '../../../../core/widget/custom_button.dart';
+import '../../../../core/widget/custom_textfield.dart';
 import '../../../auth/domain/repositories/auth.dart';
 import '../../data/repositories/email_auth.dart';
 
 class ForgetPass extends StatelessWidget {
-  static const String route = "/ForgetPass";
+  static const String route = '/ForgetPass';
 
   final TextEditingController emailController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
