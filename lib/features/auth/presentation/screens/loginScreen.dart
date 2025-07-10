@@ -1,11 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:task/core/widget/constant/colors.dart';
 import 'package:task/core/widget/constant/custom_show_dialog.dart';
 import 'package:task/core/widget/constant/text.dart';
 import 'package:task/core/widget/custom_button.dart';
 import 'package:task/core/widget/custom_textfield.dart';
-import 'package:task/core/widget/constant/colors.dart';
-import '../../../data/repositories/email_auth_service.dart';
+
 import '../../data/repositories/email_auth.dart';
 import '../../domain/repositories/auth.dart';
 
@@ -108,7 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   'Wrong password provided for that user.');
                             } else {
                               showCustomDialog(context, 'Error',
-                                  'Authentication failed.\n${e.message}');
+                                  'Authentication failed try again.\n${e.message}');
                             }
                           });
                         } catch (e) {
