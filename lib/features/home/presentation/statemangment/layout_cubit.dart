@@ -14,6 +14,7 @@ class LayoutCubit extends Cubit<LayoutStates> {
 
   WeatherInfoRealTime? weather;
 
+//try
   Future<void> getData() async {
     try {
       final response = await http.get(Uri.parse(
