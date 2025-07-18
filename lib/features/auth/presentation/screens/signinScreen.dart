@@ -8,7 +8,6 @@ import '../../../../core/widget/constant/custom_show_dialog.dart';
 import '../../../../core/widget/constant/text.dart';
 import '../../../../core/widget/custom_button.dart';
 import '../../../../core/widget/custom_textfield.dart';
-import '../../../data/repositories/email_auth_service.dart';
 import '../../data/repositories/email_auth.dart';
 import '../../domain/repositories/auth.dart';
 
