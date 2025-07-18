@@ -42,7 +42,7 @@ class WeatherScreen extends StatelessWidget {
                   children: [
                     Center(
                       child: Text(
-                        weather2.Date,
+                        weather2.date,
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -103,13 +103,13 @@ class WeatherScreen extends StatelessWidget {
                       thickness: 2,
                       color: Colors.white,
                     ),
-                    Text("Max Temp: ${weather2.MaxTemp} °C",
+                    Text("Max Temp: ${weather2.maxTemp} °C",
                         style: TextStyle(color: Colors.white)),
-                    Text("Min Temp: ${weather2.MinTemp} °C",
+                    Text("Min Temp: ${weather2.minTemp} °C",
                         style: TextStyle(color: Colors.white)),
-                    Text("Sunrise: ${weather2.SunRise}",
+                    Text("Sunrise: ${weather2.sunRise}",
                         style: TextStyle(color: Colors.white)),
-                    Text("Sunset: ${weather2.SunSet}",
+                    Text("Sunset: ${weather2.sunSet}",
                         style: TextStyle(color: Colors.white)),
                   ],
                 ),
