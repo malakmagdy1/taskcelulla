@@ -6,6 +6,7 @@ import 'package:task/core/widget/constant/text.dart';
 import 'package:task/core/widget/custom_button.dart';
 import 'package:task/core/widget/custom_textfield.dart';
 
+import '../../../home/presentation/home_screen.dart';
 import '../../data/repositories/email_auth.dart';
 import '../../domain/repositories/auth.dart';
 
@@ -28,7 +29,6 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     final Size mediaQuery = MediaQuery.of(context).size;
-
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -96,8 +96,12 @@ class _LoginScreenState extends State<LoginScreen> {
                             password: password.text.trim(),
                           );
 
-                          Navigator.pushReplacementNamed(
-                              context, 'StartScreen');
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomeSreen2(
+                                        emailTitle: email.text.trim(),
+                                      )));
                         } on FirebaseAuthException catch (e) {
                           Future.microtask(() {
                             if (e.code == 'user-not-found') {
