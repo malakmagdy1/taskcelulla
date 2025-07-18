@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
-import 'package:task/features/home/data/weather_model.dart';
 
+import '../../data/weather_model.dart';
 import '../../domain/weather/weather_entity.dart';
 
 class LayoutCubit extends Cubit<LayoutStates> {
@@ -21,7 +21,7 @@ class LayoutCubit extends Cubit<LayoutStates> {
 
       if (response.statusCode == 200) {
         final data = json.decode(response.body);
-        WeatherInfoRealTime weather = WeatherModel.fromJson(data);
+        weather = WeatherModel.fromJson(data);
         emit(GetWeatherSuccessState());
       } else {
         emit(FailedToGetWeatherState());
@@ -40,7 +40,7 @@ class LayoutCubit extends Cubit<LayoutStates> {
           "https://api.weatherapi.com/v1/forecast.json?q=giza&days=1&hour=24&key=ca98ce66998b4299ba2212530251707"));
       if (response.statusCode == 200) {
         final data = json.decode(response.body);
-        WeatherInfoForeCast weather2 = WeatherForecastModel.fromJson(data);
+        weather2 = WeatherForecastModel.fromJson(data);
         emit(GetWeatherSuccessState2());
       } else {
         emit(FailedToGetWeatherState2());
